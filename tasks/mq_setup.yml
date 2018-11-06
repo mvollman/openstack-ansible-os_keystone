@@ -28,6 +28,10 @@
   tags:
     - common-rabbitmq
   block:
+    - name: debug
+      debug:
+        var: _oslomsg_rpc_setup_host
+
     - name: Add RPC RabbitMQ vhost
       rabbitmq_vhost:
         name: "{{ _oslomsg_rpc_vhost }}"
